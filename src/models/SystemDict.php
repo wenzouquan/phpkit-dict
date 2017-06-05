@@ -8,7 +8,11 @@ class SystemDict extends \phpkit\core\BaseModel {
 	}
 
 	public function getValue() {
-		var_dump($this->value);
+		return json_decode($this->value, ture);
+	}
+
+	public function setValue($value) {
+		$this->value = json_encode($value);
 	}
 
 }
